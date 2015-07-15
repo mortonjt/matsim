@@ -1,7 +1,12 @@
 function [c,f,s] = eqn1(x,t,u,DuDx)
 
-diff1 = 1; % Diffusion of cyanos
-death1 = 0.02; % Death rate of cyanos
+%%
+% Units
+% Distance: mm
+% Time: Days
+
+diff1 = 2; % Diffusion of cyanos
+death1 = 0.2; % Death rate of cyanos
 n1 = 1; % Hill coefficient for h2s
 k1 = 1; % rate constant for h2s inhibition on cyano
 Nmax = 10; % number of total individuals allowed per pixel

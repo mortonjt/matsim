@@ -9,7 +9,7 @@ m = 0;
 x = linspace(0,100,100);
 t = linspace(0,4,20);
 %Solve the PDE
-u = pdepe(m,@eqn1,@initial1,@bc1,x,t);
+u = pdepe(m,@cyano_eqn1,@cyano_initial1,@cyano_bc1,x,t);
 %Plot solution
 surf(x,t,u);
 title('Surface plot of solution.');
