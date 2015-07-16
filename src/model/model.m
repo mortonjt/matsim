@@ -6,8 +6,8 @@ m = 0;
 %spherical symmetry.
 %
 %Define the solution mesh
-x = linspace(0,100,100);
-t = linspace(0,4,20);
+x = linspace(0,100,30);
+t = linspace(0,100,20);
 %Solve the PDE
 u = pdepe(m,@eqn1,@initial1,@bc1,x,t);
 
@@ -45,3 +45,24 @@ surf(x,t,u(:,:,5));
 title('Surface plot of biomass.');
 xlabel('Distance x')
 ylabel('Time t')
+
+%Plot solution for biomass
+figure
+surf(x,t,u(:,:,6));
+title('Surface plot of colorless sulfur bacteria.');
+xlabel('Distance x')
+ylabel('Time t')
+
+
+%Plot solution for cyanobacteria
+% figure
+% surf(x,t,u(:,:,1));
+% title('Surface plot of cyanobacteria.');
+% xlabel('Distance x')
+% ylabel('Time t')
+% hold all;
+% %Plot solution for sulfate reducers
+% surf(x,t,u(:,:,2));
+% title('Surface plot of sulfate reducers.');
+% xlabel('Distance x')
+% ylabel('Time t')
